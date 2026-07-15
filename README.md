@@ -46,6 +46,9 @@ with the command "php artisan migrate" <br>
 ### Trouble Shooting Notes:
 1. If the composer command is not found and if windows doesn't recognize composer, make sure you download and run the official Windows installer from GetComposer.org, then restart your terminal. <br>
 2. If there is a XAMPP MySQL port conflict, and if MySQL fails to start, skype or another app might be using port 3306. Close those apps or change the port in XAMPP's config. <br>
+3. Open a second command prompt terminal if you would like to run "php artisan migrate" or if a server is busy. <br>
+4. The only line in the .env file that was adjusted was DB_DATABASE=orm_practice_db <br>
+5. If your command prompt does not understand "copy" then type "cp"
 
 
 
