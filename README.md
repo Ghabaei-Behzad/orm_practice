@@ -1,3 +1,60 @@
+Behzad Ghabaei <br>
+CS 85 PHP programming <br>
+Module 8 Assignment 8A <br>
+Laravel with Database Environment <br>
+Instructor Seno <br>
+7/15/2026 <br>
+
+### Set Up Instructions
+#### How to configure a Laravel application to connect to a MySQL database using local tools.  Using XAMPP if on Windows. Verify the configuration by running a test migration and prepare the project to be shared via GitHub.
+1. Use Xampp, Composer, VS Code, git, to create a Laravel project and connect it to a MySQL database <br>
+2. Install Laravel globally, "composer global require laravel/installer" run this.  Type "laravel" to see if it is installed. <br>
+3. Choose a folder that you want this project to be installed in, such as Documents/Development <br>
+4. Create the project called orm_practice with the command "laravel new orm_practice" <br>
+after the command: laravel new orm_practice <br>
+Would you like to update now? No <br>
+Which starter kit would you like to install? None <br>
+Which testing framework do you prefer? Pest <br>
+Do you want to install Laravel Boost to improve AI assisted coding? Yes <br>
+Which database will our application use? mysql <br>
+Default database updated. Would you like to run the default database migration? no <br>
+Would you like to run npm install? no <br>
+Which features would you like to configure? guidelines, skills,mcp <br>
+Which integrations would you like to configure for Boost? None <br>
+Which AI agents would you like to configure? GitHub Copilot <br>
+cd orm_practice <br>
+5. Change directory to it, run cd orm_practice. <br>
+6. Open the project in VS Code. code . <br>
+7. Launch the database using the XAMPP software, open the XAMPP Control Panel, start MySQL and Apache.  <br>
+8. Open a browser and navigate to http://localhost/phpmyadmin <br>
+9. Click "new" in the left sidebar and type in the "Table name" of the database. <br>
+10. Name it "orm_practice_db" and click Create.<br>
+11. To configure the Laravel .env file, set up the connection parameters inside the project settings.  Open VS Code (which should have your project loaded), and click on the .env file in the root folder <br>
+12. Find this data base block and change it to this: <br>
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=orm_practice_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+13. Save the .env file. <br>
+14. Now, run database migrations.  Create the default tables inside your newly created database,
+with the command "php artisan migrate" <br>
+15. Now, sanitize your environment variables: run "copy .env .env.example" in your terminal and type yes to overwrite. <br>
+### Trouble Shooting Notes:
+1. If the composer command is not found and if windows doesn't recognize composer, make sure you download and run the official Windows installer from GetComposer.org, then restart your terminal. <br>
+2. If there is a XAMPP MySQL port conflict, and if MySQL fails to start, skype or another app might be using port 3306. Close those apps or change the port in XAMPP's config. <br>
+
+
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
